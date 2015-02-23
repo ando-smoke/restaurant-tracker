@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="restaurantsTracker">
+  <head>
+    <meta charset="UTF-8">
+    <title>Restaurant Tracker</title>
+    <script src="lib/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="js/RestaurantsController.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" ng-controller="RestaurantsCtrl">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Restaurant List</h2>
+          <ul>
+            <li ng-repeat="item in restaurants">
+              {{item.name}}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h2>New Restaurant</h2>
+        <form ng-submit= "addRestaurant()" class="form-inline" role="form">
+          <div class="form-group">
+            <input type="text" ng-model= "restaurantName" class="form-control" placeholder="Enter Name">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
