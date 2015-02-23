@@ -6,7 +6,7 @@ restaurantsTracker.controller("RestaurantsCtrl",
   $scope.locations = ["Downtown", "Northeast PDX", "Northwest PDX",
     "Pearl District", "Southeast PDX", "Southwest PDX"];
   $scope.priceRanges = ["$", "$$", "$$$"];
-  
+
   $scope.addRestaurant = function() {
     $scope.restaurants.push({
       name: $scope.restaurantName,
