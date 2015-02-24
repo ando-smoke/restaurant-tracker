@@ -24,5 +24,9 @@ restaurantsTracker.controller("RestaurantsCtrl",
   $scope.deleteRestaurant = function(restaurant) {
     var index = $scope.restaurants.indexOf(restaurant);
     $scope.restaurants.splice(index, 1);
-  }
+  };
+
+  $scope.queryIsNotEmptyString = function() {
+    return $scope.query !== "";
+  };
 });

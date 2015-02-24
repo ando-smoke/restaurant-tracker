@@ -27,7 +27,7 @@
         <div class="col-md-12">
           <h2>Restaurant List</h2>
           <ul>
-            <li ng-repeat="item in filtered = (restaurants | filter:query:true)">
+            <li ng-repeat="item in filtered = (restaurants | filter:query:queryIsNotEmptyString())">
               {{item.name}} <a ng-click="deleteRestaurant(item)">Delete</a>
               <ul>
                 <li> Food Type: {{item.foodType}}</li>
