@@ -20,4 +20,9 @@ restaurantsTracker.controller("RestaurantsCtrl",
     $scope.restaurantLocation = null;
     $scope.priceRange = null;
   };
+
+  $scope.deleteRestaurant = function(restaurant) {
+    var index = $scope.restaurants.indexOf(restaurant);
+    $scope.restaurants.splice(index, 1);
+  }
 });

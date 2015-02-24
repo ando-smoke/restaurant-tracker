@@ -7,6 +7,7 @@
     <script src="app.js"></script>
     <script src="js/RestaurantsController.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <div class="container" ng-controller="RestaurantsCtrl">
@@ -26,8 +27,8 @@
         <div class="col-md-12">
           <h2>Restaurant List</h2>
           <ul>
-            <li ng-repeat="item in restaurants | filter:query">
-              {{item.name}}
+            <li ng-repeat="item in filtered = (restaurants | filter:query:true)">
+              {{item.name}} <a ng-click="deleteRestaurant(item)">Delete</a>
               <ul>
                 <li> Food Type: {{item.foodType}}</li>
                 <li> Location: {{item.location}}</li>
