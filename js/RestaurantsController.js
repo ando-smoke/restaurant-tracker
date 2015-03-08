@@ -25,8 +25,4 @@ restaurantsTracker.controller("RestaurantsCtrl",
     var index = $scope.restaurants.indexOf(restaurant);
     $scope.restaurants.splice(index, 1);
   };
-
-  $scope.queryIsNotEmptyString = function() {
-    return $scope.query !== "";
-  };
 });
