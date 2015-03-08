@@ -17,7 +17,7 @@
           <h2>Search Restaurants</h2>
           <form class="form-inline" role="form">
             <div class="form-group">
-              <input ng-model="query" type="text" class="form-control" id="foodTypes" placeholder="search">
+              <input ng-model="query.name" type="text" class="form-control" id="foodTypes" placeholder="search">
             </div>
           </form>
         </div>
@@ -27,7 +27,7 @@
         <div class="col-md-12">
           <h2>Restaurant List</h2>
           <ul>
-            <li ng-repeat="item in filtered = (restaurants | filter:query:queryIsNotEmptyString())">
+            <li ng-repeat="item in filtered = (restaurants | filter:query)">
               {{item.name}} <a ng-click="deleteRestaurant(item)">Delete</a>
               <ul>
                 <li> Food Type: {{item.foodType}}</li>
